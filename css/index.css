@@ -130,11 +130,47 @@ table {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: BebasNeue-Regular;
+  src: url('../public/fonts/BebasNeue-Regular.otf');
+}
 html,
 body {
   height: 100%;
+  font-size: 62%;
+  font-family: BebasNeue-Regular, sans-serif;
 }
-h1 {
+.container {
+  font-size: 1.8rem;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+  background: grey;
+}
+nav h1 {
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
   color: maroon;
-  font-size: 2rem;
+  font-size: 5rem;
+  font-weight: 300;
+}
+nav a {
+  margin: 0rem 1rem;
+  color: darkblue;
+  text-decoration-line: underline;
+  cursor: pointer;
+}
+/* sticky nav */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/* sticky nav */
+.sticky + .dummy-div {
+  padding-top: 8rem;
 }
