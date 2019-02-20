@@ -145,11 +145,24 @@ table {
 	src: url('../public/fonts/BebasNeue-Regular.otf');
 }
 
+@font-face {
+	font-family: Metropolis-Regular;
+	src: url('../public/fonts/Metropolis-Regular.otf');
+}
+
 html,
 body {
 	height: 100%;
 	font-size: 62%;
+	font-family: Metropolis-Regular, sans-serif;
+}
+
+h1,
+h2,
+h3 {
 	font-family: BebasNeue-Regular, sans-serif;
+	font-size: 5rem;
+	font-weight: 300;
 }
 
 .container {
@@ -170,8 +183,6 @@ nav {
 		text-align: center;
 
 		color: maroon;
-		font-size: 5rem;
-		font-weight: 300;
 	}
 
 	a {
@@ -192,4 +203,26 @@ nav {
 /* sticky nav */
 .sticky+.dummy-div {
 	padding-top: 8rem;
+}
+
+section {
+	margin: 5rem;
+	padding: 2rem;
+
+	p {
+		margin: 2rem;
+	}
+
+
+	li {
+		margin: 2rem;
+	}
+
+	blockquote {
+		margin: 2rem;
+
+		font-size: 2rem;
+		color: grey;
+		font-family: BebasNeue-Regular, sans-serif;
+	}
 }

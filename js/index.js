@@ -5,12 +5,13 @@ window.onload = () => {
 
     //Get navbar
     let nav = document.querySelector("nav");
-    //Add event listener
+
+    //Add event listener on navbar for navigation
     nav.addEventListener("click", event => {
         scrollTo(event);
-        console.log("ok")
     });
 
+    //Scroll to the proper section
     const scrollTo = event => {
         if (event.target.localName === 'a') {
             const sectionName = event.target.getAttribute("data-section");
@@ -26,4 +27,5 @@ window.onload = () => {
             }
         }
     }
+    
 }
