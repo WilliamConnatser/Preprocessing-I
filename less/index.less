@@ -134,6 +134,31 @@ table {
 	border-spacing: 0;
 }
 
+//Animations
+@keyframes shake {
+
+	10%,
+	90% {
+		transform: translate3d(-2px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(4px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-6px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(6px, 0, 0);
+	}
+}
+
 //Fonts
 @font-face {
 	font-family: BebasNeue-Regular;
@@ -198,9 +223,13 @@ h1,
 h2,
 h3,
 h4 {
-	color: @primary-color;
 	font-family: BebasNeue-Regular, sans-serif;
 	font-weight: 300;
+
+	background: @gradient;
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
 }
 
 .container {
@@ -220,7 +249,7 @@ h4 {
 		.flex-row();
 
 		.title {
-			font-size: 5rem;
+			font-size: 6rem;
 			width: 100%;
 			text-align: center;
 		}
@@ -229,11 +258,13 @@ h4 {
 			margin: @small-margin @normal-margin;
 			color: @secondary-color;
 			text-decoration-style: dashed;
-		}
+			text-transform: uppercase;
 
-		.nav-item:hover {
-			color: @primary-color;
-			transform: scale(1.2, 1.25);
+			&:hover {
+				color: @primary-color;
+				transform: scale(1.2, 1.25);
+				font-weight: 600;
+			}
 		}
 	}
 
@@ -253,6 +284,7 @@ h4 {
 
 	.main-section {
 		margin: @normal-margin;
+		animation: shake .2s;
 
 		h2 {
 			font-size: 3rem;
@@ -283,7 +315,9 @@ h4 {
 				color: @secondary-color;
 			}
 		}
+	}
 
+	footer {
 		.icons {
 			margin: @normal-margin;
 			.flex-row();
@@ -336,9 +370,16 @@ form {
 			margin: @small-margin 0;
 			padding: 2rem 3.5rem;
 			border: 0.1rem solid @primary-color;
+			border-radius: .2rem;
 			outline: none;
 
 			font-size: 1.5rem;
+
+			&:hover {
+				color: @secondary-color;
+				background: @primary-color;
+				transform: rotateY(.1%);
+			}
 		}
 	}
 }
