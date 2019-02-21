@@ -1,0 +1,62 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/sticky-nav.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navigation">
+                <h1 class="title">William Connatser</h1>
+                <a href="index.html" class="nav-item">About</a>
+                <a href="skills.html" class="nav-item">Skills</a>
+                <a href="experience.html" class="nav-item">Experience</a>
+                <a href="portfolio.html" class="nav-item">Portfolio</a>
+                <a href="contact.html" class="nav-item">Contact</a>
+            </nav>
+            <div class="dummy-div"></div>
+        </header>
+        <main>
+            <section class="main-section">
+                <h2 id="contact">Contact</h2>
+                <div class="icons">
+                    <a href="https://twitter.com/ConnatserW"><img src="/public/twitter.png"></a>
+                    <a href="https://github.com/WilliamConnatser"><img src="/public/github.png"></a>
+                </div>
+
+                <form>
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" />
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="4"></textarea>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit">Send Message</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

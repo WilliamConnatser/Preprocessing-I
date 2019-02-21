@@ -4,11 +4,10 @@
 
 <head>
   <meta charset="utf-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
-  <script src="js/index.js"></script>
   <script src="js/sticky-nav.js"></script>
 
   <!--[if lt IE 9]>
@@ -19,19 +18,19 @@
 <body>
   <div class="container">
     <header>
-      <nav>
-        <h1>William Connatser</h1>
-        <a data-section="about">About</a>
-        <a data-section="work-experience">Work Experience</a>
-        <a data-section="skills">Skills</a>
-        <a data-section="portfolio">Portfolio</a>
-        <a data-section="contact">Contact</a>
+      <nav class="navigation">
+        <h1 class="title">William Connatser</h1>
+        <a href="index.html" class="nav-item">About</a>
+        <a href="skills.html" class="nav-item">Skills</a>
+        <a href="experience.html" class="nav-item">Experience</a>
+        <a href="portfolio.html" class="nav-item">Portfolio</a>
+        <a href="contact.html" class="nav-item">Contact</a>
       </nav>
       <div class="dummy-div"></div>
     </header>
     <main>
-      <section id="about">
-        <h2>About</h2>
+      <section class="main-section">
+        <h2 id="about">About</h2>
         <p>
           If you want to get to know me, then I suppose we can start with my name being William, but you can call me
           any
@@ -70,157 +69,12 @@
           life- technology and Computer Science.
         </p>
       </section>
-      <section id="skills">
-        <h2>Skills</h2>
-        <p>
-          <blockquote>
-            HTML
-          </blockquote>
-          <blockquote>
-            CSS
-          </blockquote>
-          <blockquote>
-            Sass
-          </blockquote>
-          <blockquote>
-            Less
-          </blockquote>
-          <blockquote>
-            Bootstrap
-          </blockquote>
-          <blockquote>
-            Javascript
-          </blockquote>
-          <blockquote>
-            Vue.JS
-          </blockquote>
-          <blockquote>
-            Brackets
-          </blockquote>
-          <blockquote>
-            Meteor.JS
-          </blockquote>
-          <blockquote>
-            Node.JS
-          </blockquote>
-          <blockquote>
-            GraphQL
-          </blockquote>
-          <blockquote>
-            MongoDB
-          </blockquote>
-        </p>
-      </section>
-      <section id="work-experience">
-        <h2>Work Experience</h2>
-        <p>
-          Several years ago I got interested in getting back into programming, so I spent about a year and a half
-          learning
-          on my own with online tutorials and videos (when I wasn't working at my other full-time job.) Since June of
-          2018,
-          I have been self-employed and spent all of my time as a software engineer. My primary focus has been on
-          building responsive and reactive full-stack applications. The tools that I am most familiar with include
-          HTML,
-          CSS, Sass, Bootstrap, Javascript, Node, Meteor, MongoDB, Vue, GraphQL.
-        </p>
-        <p>
-          I have so far served several clients as a freelance web developer by creating responsive and reactive
-          full-stack
-          applications which enable them to make their businesses more efficient. My biggest project to date was
-          helping an
-          oil & gas services company which needed an automated system to organize the workflow and data involving
-          researching the ownership and status of the assets owned by a large ranch in west Texas.
-        </p>
-        <p>
-          I am also the Managing Director of YOLO International LLC which is an investment company focused on
-          Bitcoin, decentralized technologies, and precious metals. I have served as the lead Software
-          Engineer of multiple full-stack web applications in our portfolio. Our portfolio currently consists of
-          Bitcoin,
-          Cryptocurrencies, Gold, Silver, Domain Names, and Website Assets.
-        </p>
-      </section>
-      <section id="portfolio">
-        <h2>Portfolio</h2>
-        <ul>
-          <li>
-            <h3><a href="https://www.BitcoinMaximalism.com">www.BitcoinMaximalism.com</a></h3>
-            <blockquote>HTML, CSS, Sass, Javascript, Vue, Node.JS, GraphQL, MongoDB</blockquote>
-
-            <p>
-              BitcoinMaximalism.com is a highly-specific social media platform based solely on the nuance surrounding
-              the
-              Bitcoin Maximalism and Multicoinism investment theses. Each participants' influence is directly
-              proportional to
-              the amount of Bitcoins donated. A user's upvotes and downvotes are weighted proportionally to the amount
-              they've
-              donated. Don't want to donate? Share your referral link to gain influence from those that do, or simply
-              write
-              high quality opinions which are likely to get uploaded.
-            </p>
-          </li>
-          <li>
-            <h3><a href="https://www.Decentralized.tech">www.Decentralized.tech</a></h3>
-            <blockquote>HTML, CSS, Bootstrap 3, Javascript, Meteor, Spacebars, Node.JS, MongoDB</blockquote>
-            <p>
-              Decentralized.tech is a cryptocurrency data website with interactive social components built-in. Users
-              have the
-              ability to view up-to-date market data and track their cryptocurrency portfolios while comparing its
-              performance
-              to other users' portfolios. Users can also create and browse blog and forums posts, and discover or
-              submit
-              links, reviews, and decentralized technologies.
-            </p>
-          </li>
-          <li>
-            <h3><a href="http://www.cryptohun.ch">www.CryptoHun.ch</a></h3>
-            <blockquote>HTML, CSS, Bootstrap 4, Javascript, Meteor, Spacebars, Node.JS, MongoDB</blockquote>
-            <p>
-              Cryptohun.ch is a tradable card game where players have complete control and ownership of their digital
-              in-game assets by leveraging blockchain assets. By utilizing a public ledger for card ownership, players
-              are able to audit how many of each card exists for an optimal card economy. The game is open source, so
-              the
-              game's
-              players ultimately decide the game's direction, rules, policies, and graphics by choosing which game
-              server to
-              play on.
-            </p>
-          </li>
-        </ul>
-      </section>
-      <section id="contact">
-        <h2>Contact</h2>
-        <form method="post" action="#">
-          <div class="fields">
-            <div class="field half">
-              <label for="name">Name</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div class="field half">
-              <label for="email">Email</label>
-              <input type="text" name="email" id="email" />
-            </div>
-            <div class="field">
-              <label for="message">Message</label>
-              <textarea name="message" id="message" rows="4"></textarea>
-            </div>
-          </div>
-          <ul class="actions">
-            <li><input type="submit" value="Send Message" class="primary" /></li>
-            <li><input type="reset" value="Reset" /></li>
-          </ul>
-        </form>
-        <ul class="icons">
-          <li><a href="https://twitter.com/ConnatserW" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-          <!-- <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li> -->
-          <!-- <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li> -->
-          <li><a href="https://github.com/WilliamConnatser" class="icon fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-      </section>
     </main>
     <footer>
-      &amp; Copyright 2019
+        &copy; Copyright 2019
     </footer>
   </div>
+
 </body>
 
 </html>

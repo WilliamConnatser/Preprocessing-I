@@ -1,4 +1,4 @@
-const stickyNav = () => {
+window.onload = () => {
 
     // When the user scrolls the page, execute myFunction
     window.onscroll = function () {
@@ -16,12 +16,12 @@ const stickyNav = () => {
     function myFunction() {
 
         if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky");
+            navbar.classList.add("sticky-nav");
             //Add padding on main section so it isn't hidden behind sticky nav
-            main.style.marginTop = "6rem";
+            main.style.marginTop = navbar.style.offsetTop;
 
         } else {
-            navbar.classList.remove("sticky");
+            navbar.classList.remove("sticky-nav");
             //Remove main padding
             main.style.marginTop = 0;
         }

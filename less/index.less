@@ -1,4 +1,3 @@
-// Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -135,11 +134,7 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-	box-sizing: border-box;
-}
-
+//Fonts
 @font-face {
 	font-family: BebasNeue-Regular;
 	src: url('../public/fonts/BebasNeue-Regular.otf');
@@ -150,79 +145,200 @@ table {
 	src: url('../public/fonts/Metropolis-Regular.otf');
 }
 
-html,
-body {
-	height: 100%;
-	font-size: 62%;
-	font-family: Metropolis-Regular, sans-serif;
+//Variables
+@body-font: Metropolis-Regular, "sans-serif";
+@heading-font: BebasNeue-Regular, "sans-serif";
+
+@gradient: linear-gradient(to left top, maroon, black);
+@primary-color: maroon;
+@secondary-color: grey;
+@tertiary-color: darkblue;
+@link-color: darkgrey;
+
+@mobile: (max-width: 500px);
+@normal-margin: 2rem;
+@small-margin: 1rem;
+
+//Defaults
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+	font-family: @body-font;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+//3 Mixins
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
+	color: @primary-color;
 	font-family: BebasNeue-Regular, sans-serif;
-	font-size: 5rem;
 	font-weight: 300;
 }
 
 .container {
-	font-size: 1.8rem;
+	min-height: 100vh;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1.5rem 0;
+
+	.flex-column();
+
+	font-size: 1.5rem;
+	background: white;
+	font-family: Metropolis-Regular, sans-serif;
+
+	.navigation {
+		background: white;
+		.flex-row();
+
+		.title {
+			font-size: 5rem;
+			width: 100%;
+			text-align: center;
+		}
+
+		.nav-item {
+			margin: @small-margin @normal-margin;
+			color: @secondary-color;
+			text-decoration-style: dashed;
+		}
+
+		.nav-item:hover {
+			color: @primary-color;
+			transform: scale(1.2, 1.25);
+		}
+	}
+
+	// Sticky Nav
+	.sticky-nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 1.5rem 0;
+	}
+
+	// Sticky Nave Scroll Helper
+	.sticky-nav+.dummy-div {
+		padding-top: 8rem;
+	}
+
+	.main-section {
+		margin: @normal-margin;
+
+		h2 {
+			font-size: 3rem;
+		}
+
+		p {
+			margin: @normal-margin;
+		}
+
+		.skills {
+			.flex-row();
+
+			span {
+				margin: @small-margin;
+				font-size: 1.8rem;
+			}
+		}
+
+		.portfolio-item {
+
+			h3 {
+				color: @tertiary-color;
+				font-size: 3rem;
+			}
+
+			blockquote {
+				margin: @small-margin 0;
+				color: @secondary-color;
+			}
+		}
+
+		.icons {
+			margin: @normal-margin;
+			.flex-row();
+			outline: none;
+
+			img {
+				margin: @small-margin;
+				height: 6rem;
+				width: 6rem;
+			}
+		}
+	}
 }
 
-nav {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
 
-	padding: 2rem;
-	background: grey;
+form {
 
-	h1 {
-		width: 100%;
-		margin-bottom: 1rem;
+	.input-group {
+		margin: @normal-margin 0;
+
+		label {
+			font-size: 3rem;
+			display: block;
+			width: 100%;
+			font-weight: 300;
+		}
+
+		input {
+			width: 100%;
+			height: 4rem;
+			font-size: 2rem;
+			border: 0.1rem solid @primary-color;
+			outline: none;
+		}
+
+		textarea {
+			width: 100%;
+			height: 25rem;
+			font-size: 2rem;
+			border: 0.1rem solid @primary-color;
+			outline: none;
+		}
+
+	}
+
+	.button-group {
 		text-align: center;
 
-		color: maroon;
-	}
+		button {
+			margin: @small-margin 0;
+			padding: 2rem 3.5rem;
+			border: 0.1rem solid @primary-color;
+			outline: none;
 
-	a {
-		margin: 0rem 1rem;
-		color: darkblue;
-		text-decoration-line: underline;
-		cursor: pointer;
-	}
-}
-
-/* sticky nav */
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-
-/* sticky nav */
-.sticky+.dummy-div {
-	padding-top: 8rem;
-}
-
-section {
-	margin: 5rem;
-	padding: 2rem;
-
-	p {
-		margin: 2rem;
-	}
-
-
-	li {
-		margin: 2rem;
-	}
-
-	blockquote {
-		margin: 2rem;
-
-		font-size: 2rem;
-		color: grey;
-		font-family: BebasNeue-Regular, sans-serif;
+			font-size: 1.5rem;
+		}
 	}
 }
